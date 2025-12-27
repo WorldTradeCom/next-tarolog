@@ -2,7 +2,8 @@ import VisitCard from "@/components/VisitCard";
 import { Secondary } from "@/data/social_inks";
 
 export const metadata = {
-	title: "Галина Таро Мастер"
+	title: "Галина Таро Мастер",
+	description: "Помогу тебе в любом вопросе!"
 };
 
 export default function SecondaryMain() {

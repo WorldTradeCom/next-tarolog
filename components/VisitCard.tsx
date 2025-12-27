@@ -16,7 +16,7 @@ export default function VisitCard({config, label}: VisitCardProps) {
 					alt="Background"
 					width={3456}
 					height={753}
-					className="h-1/4 md:h-1/4 absolute z-0 object-cover"
+					className="h-2/12 md:h-1/4 absolute z-0 object-cover"
 				/>
 			</header>
 			<div className="min-h-screen text-white">
@@ -29,12 +29,12 @@ export default function VisitCard({config, label}: VisitCardProps) {
 						className="z-10 w-40 h-40 sm:w-72 sm:h-72"
 					/>
 					<div className="text-center z-20">
-						<h1 className="text-5xl mt-4">Галина</h1>
-						<h2 className="text-3xl">Провидица | Таролог</h2>
+						<h1 className="text-[2.9rem] leading-none mt-4">Галина</h1>
+						<h2 className="text-3xl">Провидица <span className="text-2xl">|</span> Таролог</h2>
 						<br/>
 						<span className="text-2xl">Пишите мне:</span>
 					</div>
-					<div className="flex flex-wrap justify-center gap-4 mt-6">
+					<div className="flex flex-wrap justify-center gap-4 mt-4">
 						<SocialButton type="whatsapp" color="#25d366" config={config} />
 						<SocialButton type="telegram" color="#0088cc" config={config} />
 						<SocialButton type="max" color="#c9c9c9"  config={config} />
