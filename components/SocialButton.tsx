@@ -17,12 +17,18 @@ export default function SocialButton({ type, color, config }: SocialButtonProps)
 		<a
 			href={link}
 			target="_blank"
-			rel="noopener noreferrer"
-			className={`flex items-center justify-center gap-2 px-6 py-3 rounded-md ${TextColor} text-lg font-medium transition-transform duration-300 hover:scale-105 active:brightness-75 min-w-50`}
+			className={`gap-2 px-6 py-3 rounded-md min-w-70 ${TextColor} transition-transform duration-300 hover:scale-105 active:brightness-75`}
 			style={{ backgroundColor: color }}
 		>
-			<Image src={ImageLink} alt={label} width={24} height={24} />
-			{label}
+			<div className="w-full flex items-center justify-between">
+				<span className="text-2xl">{label}</span>
+				<Image
+					src={ImageLink}
+					alt={label}
+					width={24}
+					height={24}
+				/>
+				</div>
 		</a>
 	);
 }

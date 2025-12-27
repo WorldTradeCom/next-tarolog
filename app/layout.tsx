@@ -25,7 +25,7 @@ export default function RootLayout({
 	return (
 		<html lang="ru">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-				<main className="bg-[radial-gradient(115.63%_58.45%_at_102.06%_72.19%,_#83a4c8_0%,_#5f81a7_29.42%,_#304965_56.5%,_#2b3e54_65.62%,_#212834_90.74%,_#202327_100%)]">
+				<main className="backgorud_gradient">
 					{children}
 				</main>
 			</body>
