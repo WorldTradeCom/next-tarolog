@@ -1,11 +1,12 @@
 {
   "name": "next-tarolog",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+	"upgrade": "next upgrade",
     "lint": "eslint"
   },
   "dependencies": {
