@@ -6,7 +6,7 @@ export const Main: Record<ButtonType, { link: string; label: string } >= {
 		label: "Telegram",
 	},
 	whatsapp: {
-		link: "https://wa.me/380505485357?text=Здравствуйте, Галина! Я бы хотела заказать у вас расклад. Скажите, пожалуйста, что для этого нужно?",
+		link: "https://wa.me/380973705851?text=Здравствуйте, Галина! Я бы хотела заказать у вас расклад. Скажите, пожалуйста, что для этого нужно?",
 		label: "WhatsApp",
 	},
 	max: {
@@ -21,7 +21,7 @@ export const Secondary: Record<ButtonType, { link: string; label: string } >= {
 		label: "Telegram",
 	},
 	whatsapp: {
-		link: "https://wa.me/79290468138?text=Здравствуйте, Галина! Я бы хотела заказать у вас расклад. Скажите, пожалуйста, что для этого нужно?",
+		link: "https://wa.me/380973705851?text=Здравствуйте, Галина! Я бы хотела заказать у вас расклад. Скажите, пожалуйста, что для этого нужно?",
 		label: "WhatsApp",
 	},
 	max: {
