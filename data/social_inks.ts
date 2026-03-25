@@ -2,7 +2,7 @@ import { ButtonType } from "@/components/SocialButton";
 
 export const Main: Record<ButtonType, { link: string; label: string } >= {
 	telegram: {
-		link: "https://t.me/m/betRcUGkYTNi",
+		link: "https://t.me/m/iSV7Zhx9YzZi",
 		label: "Telegram",
 	},
 	whatsapp: {
