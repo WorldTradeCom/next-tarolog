@@ -35,9 +35,9 @@ export default function VisitCard({config, label}: VisitCardProps) {
 						<span className="text-2xl">Пишите мне:</span>
 					</div>
 					<div className="flex flex-wrap justify-center gap-4 mt-4">
+						<SocialButton type="max" color="#9A6EC3"  config={config} />
 						<SocialButton type="whatsapp" color="#25d366" config={config} />
 						<SocialButton type="telegram" color="#0088cc" config={config} />
-						<SocialButton type="max" color="#c9c9c9"  config={config} />
 					</div>
 					<Image
 						src="/images/star_line.png"
