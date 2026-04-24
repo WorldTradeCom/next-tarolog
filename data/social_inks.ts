@@ -2,30 +2,30 @@ import { ButtonType } from "@/components/SocialButton";
 
 export const Main: Record<ButtonType, { link: string; label: string }> = {
   telegram: {
-    link: "/go?to=tg_main",
+    link: "https://clck.ru/3TGRrM",
     label: "Telegram",
   },
   whatsapp: {
-    link: "/go?to=wa",
+    link: "https://wa.me/380973705851?text=Здравствуйте, Галина! Я бы хотела заказать у вас расклад. Скажите, пожалуйста, что для этого нужно?",
     label: "WhatsApp",
   },
   max: {
-    link: "/go?to=max",
+    link: "https://max.ru/u/f9LHodD0cOIT7N6XceeCgmeeFplv9GtCguy7PA9WTikniGLgjz0BR-gD8Bo",
     label: "Max",
   },
 };
 
 export const Secondary: Record<ButtonType, { link: string; label: string }> = {
   telegram: {
-    link: "/go?to=tg_sec",
+    link: "https://clck.ru/3TGRrM", // Здесь тоже можно использовать эту же ссылку
     label: "Telegram",
   },
   whatsapp: {
-    link: "/go?to=wa",
+    link: "https://wa.me/380973705851?text=Здравствуйте, Галина! Я бы хотела заказать у вас расклад. Скажите, пожалуйста, что для этого нужно?",
     label: "WhatsApp",
   },
   max: {
-    link: "/go?to=max",
+    link: "https://max.ru/u/f9LHodD0cOIT7N6XceeCgmeeFplv9GtCguy7PA9WTikniGLgjz0BR-gD8Bo",
     label: "Max",
   },
 };
