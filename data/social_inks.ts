@@ -2,7 +2,7 @@ import { ButtonType } from "@/components/SocialButton";
 
 export const Main: Record<ButtonType, { link: string; label: string }> = {
   telegram: {
-    link: "https://t.me/m/iSV7Zhx9YzZi",
+    link: "https://t.me/m/QPpIPdEmMzA6",
     label: "Telegram",
   },
   whatsapp: {
@@ -10,14 +10,14 @@ export const Main: Record<ButtonType, { link: string; label: string }> = {
     label: "WhatsApp",
   },
   max: {
-    link: "https://max.ru/u/f9LHodD0cOIT7N6XceeCgmeeFplv9GtCguy7PA9WTikniGLgjz0BR-gD8Bo",
+    link: "https://max.ru/u/f9LHodD0cOJNPFgKFu49nAjZ7Xx3ebmc_jJ95dGLRKZi_Tx_DSO_iUMUaMY",
     label: "Max",
   },
 };
 
 export const Secondary: Record<ButtonType, { link: string; label: string }> = {
   telegram: {
-    link: "https://t.me/m/betRcUgkYTNi",
+    link: "https://t.me/m/QPpIPdEmMzA6",
     label: "Telegram",
   },
   whatsapp: {
@@ -25,7 +25,7 @@ export const Secondary: Record<ButtonType, { link: string; label: string }> = {
     label: "WhatsApp",
   },
   max: {
-    link: "https://max.ru/u/f9LHodD0cOIT7N6XceeCgmeeFplv9GtCguy7PA9WTikniGLgjz0BR-gD8Bo",
+    link: "https://max.ru/u/f9LHodD0cOJNPFgKFu49nAjZ7Xx3ebmc_jJ95dGLRKZi_Tx_DSO_iUMUaMY",
     label: "Max",
   },
 };
