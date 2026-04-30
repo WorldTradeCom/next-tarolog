@@ -15,27 +15,27 @@ export default function SocialButton({ type, color, config }: SocialButtonProps)
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="transition-transform duration-300 hover:scale-105 active:brightness-75"
-			style={{ 
-				backgroundColor: color, 
-				minWidth: '280px', 
-				padding: '12px 24px', 
-				borderRadius: '6px', 
-				textDecoration: 'none', 
-				display: 'block',
-				margin: '8px'
+			style={{
+				backgroundColor: color,
+				minWidth: '280px',
+				height: '54px', // Жесткая высота как в оригинале
+				padding: '0 24px',
+				borderRadius: '6px',
+				display: 'flex',
+				alignItems: 'center',
+				textDecoration: 'none',
+				transition: 'transform 0.3s ease'
 			}}
+			className="hover:scale-105 active:brightness-75"
 		>
-			<div style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between' }}>
-				<span style={{ fontSize: '1.5rem', color: '#ffffff', fontWeight: 'normal' }}>{label}</span>
+			<div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
+				<span style={{ fontSize: '24px', color: 'white', fontFamily: 'sans-serif' }}>{label}</span>
 				<img
 					alt={label}
-					width={24}
-					height={24}
-					style={{ objectFit: 'contain' }}
 					src={ImageLink}
+					style={{ width: '24px', height: '24px', objectFit: 'contain' }}
 				/>
 			</div>
 		</a>
-	);
+	); 
 }
