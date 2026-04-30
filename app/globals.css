@@ -1,9 +1,14 @@
-@import "tailwindcss";
-
-body {
-	color: #ffffff;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .backgorud_gradient {
-	background-image: radial-gradient(115.63% 58.45% at 102.06% 72.19%, #83a4c8 0%, #5f81a7 29.42%, #304965 56.5%, #2b3e54 65.62%, #212834 90.74%, #202327 100%);
+  background: radial-gradient(circle at center, #2b3a55 0%, #16213e 100%);
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #16213e;
 }
