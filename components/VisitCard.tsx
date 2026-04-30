@@ -8,68 +8,68 @@ interface VisitCardProps {
 
 export default function VisitCard({config, label}: VisitCardProps) {
 	return (
-		<div className="relative min-h-screen bg-[#0f0f1b] overflow-hidden">
-			{/* Шапка с фоном */}
-			<header className="relative w-full h-[25vh] md:h-[30vh]">
+		<div className="relative min-h-screen bg-[#1a2639] overflow-hidden flex flex-col">
+			{/* Шапка с астрологическим фоном */}
+			<header className="relative w-full h-[22vh] md:h-[25vh]">
 				<Image
 					src="/images/header_background.webp" 
 					alt="Background"
 					fill
 					priority
-					className="z-0 object-cover opacity-60"
+					className="z-0 object-cover opacity-50"
 				/>
-				<div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0f0f1b] z-1" />
+				{/* Мягкий градиент для перехода в основной цвет */}
+				<div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a2639] z-1" />
 			</header>
 
-			<div className="relative flex flex-col items-center -mt-20 sm:-mt-32 px-4 pb-12">
-				{/* Аватарка */}
-				<div className="relative z-10 p-1 bg-gradient-to-b from-purple-500 to-blue-500 rounded-full shadow-2xl">
+			<div className="relative flex flex-col items-center -mt-16 sm:-mt-24 px-4 flex-grow">
+				{/* Аватарка с белой рамкой как на оригинале */}
+				<div className="relative z-10 rounded-full border-[3px] border-white/80 shadow-lg overflow-hidden w-36 h-36 sm:w-56 sm:h-56">
 					<Image
 						src="/images/avatar.webp"
-						alt="Галина Таро"
-						width={300}
-						height={300}
-						className="rounded-full w-40 h-40 sm:w-64 sm:h-64 object-cover border-4 border-[#0f0f1b]"
+						alt="Галина"
+						fill
+						className="object-cover"
 					/>
 				</div>
 
 				{/* Текстовый блок */}
-				<div className="text-center z-20 mt-6">
-					<h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-md">
+				<div className="text-center z-20 mt-4">
+					<h1 className="text-4xl md:text-5xl font-medium text-white mb-1">
 						Галина
 					</h1>
-					<p className="text-2xl md:text-3xl text-purple-300 mt-2 font-light">
-						Провидица <span className="text-white/30 px-2">|</span> Таролог
+					<p className="text-xl md:text-2xl text-white/70">
+						Провидица <span className="text-white/30 px-1">|</span> Таролог
 					</p>
 					
-					<div className="mt-8 mb-4">
-						<span className="text-xl uppercase tracking-[0.3em] text-white/60">Пишите мне:</span>
+					<div className="mt-6 mb-4">
+						<span className="text-sm md:text-base uppercase tracking-[0.2em] text-white/50">Пишите мне:</span>
 					</div>
 				</div>
 
-				{/* Кнопки соцсетей */}
-				<div className="flex flex-wrap justify-center gap-6 mt-2 w-full max-w-md">
-					<SocialButton type="max" color="#9A6EC3" config={config} />
-					<SocialButton type="telegram" color="#0088cc" config={config} />
-					<SocialButton type="whatsapp" color="#25d366" config={config} />
+				{/* Кнопки (сделал их чуть компактнее) */}
+				<div className="flex flex-col items-center gap-3 mt-2 w-full max-w-[320px]">
+					<SocialButton type="max" color="#9b6fb9" config={config} />
+					<SocialButton type="telegram" color="#248bc7" config={config} />
+					<SocialButton type="whatsapp" color="#43b54d" config={config} />
 				</div>
 
-				{/* Разделитель (теперь тоже WebP) */}
-				<div className="w-full max-w-lg mt-8 opacity-90">
+				{/* Разделитель */}
+				<div className="w-full max-w-md mt-6 opacity-60">
 					<Image
 						src="/images/star_line.webp" 
 						alt="Star Line"
 						width={1432}
 						height={82}
-						className="w-full h-auto object-contain"
+						className="w-full h-auto"
 					/>
 				</div>
 
-				{/* Важная плашка */}
-				<div className="mt-6 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm max-w-sm text-center">
-					<span className="text-lg md:text-xl text-white/90 leading-relaxed italic">
+				{/* Текст внизу */}
+				<div className="mt-auto pb-8 pt-4 text-center max-w-lg">
+					<p className="text-sm md:text-base text-white/80 font-light px-6">
 						{label}
-					</span>
+					</p>
 				</div>
 			</div>
 		</div>
