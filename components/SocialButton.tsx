@@ -15,16 +15,24 @@ export default function SocialButton({ type, color, config }: SocialButtonProps)
 			href={link}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="flex gap-2 px-6 py-3 rounded-md min-w-[280px] text-white no-underline transition-transform duration-300 hover:scale-105 active:brightness-75"
-			style={{ backgroundColor: color }}
+			className="transition-transform duration-300 hover:scale-105 active:brightness-75"
+			style={{ 
+				backgroundColor: color, 
+				minWidth: '280px', 
+				padding: '12px 24px', 
+				borderRadius: '6px', 
+				textDecoration: 'none', 
+				display: 'block',
+				margin: '8px'
+			}}
 		>
-			<div className="w-full flex items-center justify-between">
-				<span className="text-2xl text-white font-sans">{label}</span>
+			<div style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between' }}>
+				<span style={{ fontSize: '1.5rem', color: '#ffffff', fontWeight: 'normal' }}>{label}</span>
 				<img
 					alt={label}
 					width={24}
 					height={24}
-					className="object-contain"
+					style={{ objectFit: 'contain' }}
 					src={ImageLink}
 				/>
 			</div>
