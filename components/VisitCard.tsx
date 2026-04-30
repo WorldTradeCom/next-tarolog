@@ -8,70 +8,51 @@ interface VisitCardProps {
 
 export default function VisitCard({config, label}: VisitCardProps) {
 	return (
-		<div className="relative min-h-screen bg-[#1a2639] overflow-hidden flex flex-col">
-			{/* Шапка с астрологическим фоном */}
-			<header className="relative w-full h-[22vh] md:h-[25vh]">
-				<Image
-					src="/images/header_background.webp" 
-					alt="Background"
-					fill
-					priority
-					className="z-0 object-cover opacity-50"
-				/>
-				{/* Мягкий градиент для перехода в основной цвет */}
-				<div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a2639] z-1" />
-			</header>
-
-			<div className="relative flex flex-col items-center -mt-16 sm:-mt-24 px-4 flex-grow">
-				{/* Аватарка с белой рамкой как на оригинале */}
-				<div className="relative z-10 rounded-full border-[3px] border-white/80 shadow-lg overflow-hidden w-36 h-36 sm:w-56 sm:h-56">
+		<main className="backgorud_gradient">
+			<div>
+				<header>
 					<Image
-						src="/images/avatar.webp"
-						alt="Галина"
-						fill
-						className="object-cover"
+						src="/images/header_background.webp"
+						alt="Background"
+						width={3456}
+						height={753}
+						className="h-2/12 md:h-1/4 absolute z-0 object-cover"
+						priority
 					/>
-				</div>
+				</header>
+				<div className="min-h-screen text-white">
+					<div className="flex flex-col justify-center items-center h-screen text-center relative">
+						<Image
+							src="/images/avatar.webp"
+							alt="Avatar"
+							width={300}
+							height={300}
+							className="z-10 w-40 h-40 sm:w-72 sm:h-72"
+						/>
+						<div className="text-center z-20">
+							<h1 className="text-[2.9rem] leading-none mt-4 font-normal">Галина</h1>
+							<h2 className="text-3xl font-normal">Провидица <span className="text-2xl">|</span> Таролог</h2>
+							<br/>
+							<span className="text-2xl">Пишите мне:</span>
+						</div>
+						
+						<div className="flex flex-wrap justify-center gap-4 mt-4 z-20">
+							<SocialButton type="max" color="#9A6EC3" config={config} />
+							<SocialButton type="telegram" color="#0088cc" config={config} />
+							<SocialButton type="whatsapp" color="#25d366" config={config} />
+						</div>
 
-				{/* Текстовый блок */}
-				<div className="text-center z-20 mt-4">
-					<h1 className="text-4xl md:text-5xl font-medium text-white mb-1">
-						Галина
-					</h1>
-					<p className="text-xl md:text-2xl text-white/70">
-						Провидица <span className="text-white/30 px-1">|</span> Таролог
-					</p>
-					
-					<div className="mt-6 mb-4">
-						<span className="text-sm md:text-base uppercase tracking-[0.2em] text-white/50">Пишите мне:</span>
+						<Image
+							src="/images/star_line.webp"
+							alt="Star Line"
+							width={1432}
+							height={82}
+							className="py-4 z-20 w-auto"
+						/>
+						<span className="text-1xl md:text-2xl px-4 z-20">{label}</span>
 					</div>
 				</div>
-
-				{/* Кнопки (сделал их чуть компактнее) */}
-				<div className="flex flex-col items-center gap-3 mt-2 w-full max-w-[320px]">
-					<SocialButton type="max" color="#9b6fb9" config={config} />
-					<SocialButton type="telegram" color="#248bc7" config={config} />
-					<SocialButton type="whatsapp" color="#43b54d" config={config} />
-				</div>
-
-				{/* Разделитель */}
-				<div className="w-full max-w-md mt-6 opacity-60">
-					<Image
-						src="/images/star_line.webp" 
-						alt="Star Line"
-						width={1432}
-						height={82}
-						className="w-full h-auto"
-					/>
-				</div>
-
-				{/* Текст внизу */}
-				<div className="mt-auto pb-8 pt-4 text-center max-w-lg">
-					<p className="text-sm md:text-base text-white/80 font-light px-6">
-						{label}
-					</p>
-				</div>
 			</div>
-		</div>
+		</main>
 	);
 }
