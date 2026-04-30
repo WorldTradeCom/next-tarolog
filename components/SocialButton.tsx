@@ -11,31 +11,28 @@ export default function SocialButton({ type, color, config }: SocialButtonProps)
 	const ImageLink = `/icons/${type}.webp`;
 
 	return (
-		<a
-			href={link}
-			target="_blank"
-			rel="noopener noreferrer"
-			style={{
-				backgroundColor: color,
-				minWidth: '280px',
-				height: '54px', // Жесткая высота как в оригинале
-				padding: '0 24px',
-				borderRadius: '6px',
+		<a 
+			href={link} 
+			target="_blank" 
+			className="gap-2 px-6 py-3 rounded-md text-white transition-transform duration-300 hover:scale-105 active:brightness-75" 
+			style={{ 
+				backgroundColor: color, 
+				minWidth: '280px', // Это точный эквивалент min-w-70
 				display: 'flex',
 				alignItems: 'center',
-				textDecoration: 'none',
-				transition: 'transform 0.3s ease'
+				textDecoration: 'none'
 			}}
-			className="hover:scale-105 active:brightness-75"
 		>
-			<div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
-				<span style={{ fontSize: '24px', color: 'white', fontFamily: 'sans-serif' }}>{label}</span>
-				<img
-					alt={label}
+			<div className="w-full flex items-center justify-between">
+				<span className="text-2xl font-normal">{label}</span>
+				<img 
+					alt={label} 
+					width="24" 
+					height="24" 
+					className="object-contain" 
 					src={ImageLink}
-					style={{ width: '24px', height: '24px', objectFit: 'contain' }}
 				/>
 			</div>
 		</a>
-	); 
+	);
 }
