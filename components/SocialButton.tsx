@@ -10,24 +10,27 @@ interface SocialButtonProps {
 
 export default function SocialButton({ type, color, config }: SocialButtonProps) {
 	const { link, label } = config[type];
-	const ImageLink = `/icons/${type}.png`;
+	// Теперь используем оптимизированный формат webp
+	const ImageLink = `/icons/${type}.webp`;
 
 	return (
 		<a
 			href={link}
 			target="_blank"
-			className={`gap-2 px-6 py-3 rounded-md min-w-70 text-white transition-transform duration-300 hover:scale-105 active:brightness-75`}
+			rel="noopener noreferrer"
+			className="flex items-center justify-between gap-4 px-6 py-4 rounded-xl min-w-[280px] text-white transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:brightness-90 shadow-md"
 			style={{ backgroundColor: color }}
 		>
-			<div className="w-full flex items-center justify-between">
-				<span className="text-2xl">{label}</span>
+			<span className="text-2xl font-medium tracking-wide">{label}</span>
+			<div className="flex items-center justify-center bg-white/20 p-2 rounded-lg">
 				<Image
 					src={ImageLink}
 					alt={label}
-					width={24}
-					height={24}
+					width={32}
+					height={32}
+					className="object-contain"
 				/>
-				</div>
+			</div>
 		</a>
 	);
 }
