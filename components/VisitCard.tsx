@@ -7,50 +7,55 @@ interface VisitCardProps {
 
 export default function VisitCard({config, label}: VisitCardProps) {
 	return (
-		<main className="backgorud_gradient relative overflow-hidden">
-			<div>
-				<header>
-					<img 
-						alt="Background" 
-						width={3456} 
-						height={753} 
-						className="absolute top-0 left-0 w-full z-0 object-cover" 
-						style={{ height: '25vh' }}
-						src="/images/header_background.webp"
-					/>
-				</header>
-				<div className="min-h-screen relative z-10" style={{ color: '#ffffff' }}>
-					<div className="flex flex-col justify-center items-center h-screen text-center">
-						<img 
-							alt="Avatar" 
-							width={300} 
-							height={300} 
-							className="z-10 w-40 h-40 sm:w-72 sm:h-72" 
-							src="/images/avatar.webp"
-						/>
-						<div className="text-center z-20">
-							<h1 className="text-[2.9rem] leading-none mt-4" style={{ color: '#ffffff' }}>Галина</h1>
-							<h2 className="text-3xl" style={{ color: '#ffffff' }}>Провидица <span className="text-2xl">|</span> Таролог</h2>
-							<br/>
-							<span className="text-2xl" style={{ color: '#ffffff' }}>Пишите мне:</span>
-						</div>
-						
-						<div className="flex flex-wrap justify-center items-center w-full max-w-4xl px-4 z-20 mt-4">
-							<SocialButton type="max" color="#9A6EC3" config={config} />
-							<SocialButton type="telegram" color="#0088cc" config={config} />
-							<SocialButton type="whatsapp" color="#25d366" config={config} />
-						</div>
+		<main className="backgorud_gradient" style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}>
+			<header>
+				<img 
+					alt="Background" 
+					src="/images/header_background.webp"
+					style={{ 
+						position: 'absolute', 
+						top: 0, 
+						left: 0, 
+						width: '100%', 
+						height: '25%', 
+						objectFit: 'cover', 
+						zIndex: 0 
+					}}
+				/>
+			</header>
+			
+			<div style={{ position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', textAlign: 'center', color: 'white' }}>
+				
+				<img 
+					alt="Avatar" 
+					src="/images/avatar.webp"
+					style={{ width: '160px', height: '160px', borderRadius: '50%', marginBottom: '16px' }}
+					className="sm:w-72 sm:h-72"
+				/>
 
-						<img 
-							alt="Star Line" 
-							width={1432} 
-							height={82} 
-							className="py-4 z-20" 
-							src="/images/star_line.webp"
-						/>
-						<span className="text-1xl md:text-2xl px-4 z-20" style={{ color: '#ffffff' }}>{label}</span>
-					</div>
+				<div style={{ marginBottom: '24px' }}>
+					<h1 style={{ fontSize: '2.9rem', lineHeight: '1', margin: '0' }}>Галина</h1>
+					<h2 style={{ fontSize: '30px', fontWeight: 'normal', margin: '8px 0' }}>
+						Провидица <span style={{ fontSize: '24px', opacity: 0.8 }}>|</span> Таролог
+					</h2>
+					<p style={{ fontSize: '24px', marginTop: '30px', marginBottom: '16px' }}>Пишите мне:</p>
 				</div>
+
+				<div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px', maxWidth: '900px' }}>
+					<SocialButton type="max" color="#9A6EC3" config={config} />
+					<SocialButton type="telegram" color="#0088cc" config={config} />
+					<SocialButton type="whatsapp" color="#25d366" config={config} />
+				</div>
+
+				<img 
+					alt="Star Line" 
+					src="/images/star_line.webp"
+					style={{ width: '100%', maxWidth: '600px', margin: '20px 0' }}
+				/>
+
+				<p style={{ fontSize: '20px', padding: '0 20px', maxWidth: '500px' }}>
+					{label}
+				</p>
 			</div>
 		</main>
 	);
