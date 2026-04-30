@@ -5,10 +5,13 @@
 .backgorud_gradient {
   background: radial-gradient(circle at center, #2b3a55 0%, #16213e 100%);
   min-height: 100vh;
+  width: 100%;
 }
 
 body {
+  background-color: #16213e;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  background-color: #16213e;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
