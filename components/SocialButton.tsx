@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export type ButtonType = "telegram" | "whatsapp" | "max";
 
 interface SocialButtonProps {
@@ -8,32 +10,24 @@ interface SocialButtonProps {
 
 export default function SocialButton({ type, color, config }: SocialButtonProps) {
 	const { link, label } = config[type];
-	const ImageLink = `/icons/${type}.webp`;
+	const ImageLink = `/icons/${type}.png`;
 
 	return (
-		<a 
-			href={link} 
-			target="_blank" 
-			rel="noopener noreferrer"
-			className="px-6 py-3 rounded-md text-white transition-transform duration-300 hover:scale-105 active:brightness-75" 
-			style={{ 
-				backgroundColor: color, 
-				minWidth: '280px', 
-				display: 'flex', 
-				textDecoration: 'none',
-				marginBottom: '8px' 
-			}}
+		<a
+			href={link}
+			target="_blank"
+			className={`gap-2 px-6 py-3 rounded-md min-w-70 text-white transition-transform duration-300 hover:scale-105 active:brightness-75`}
+			style={{ backgroundColor: color }}
 		>
-			<div className="w-full flex items-center justify-between" style={{ display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between' }}>
-				<span style={{ fontSize: '1.5rem', lineHeight: '2rem' }}>{label}</span>
-				<img 
-					alt={label} 
-					width="24" 
-					height="24" 
-					className="object-contain" 
+			<div className="w-full flex items-center justify-between">
+				<span className="text-2xl">{label}</span>
+				<Image
 					src={ImageLink}
+					alt={label}
+					width={24}
+					height={24}
 				/>
-			</div>
+				</div>
 		</a>
 	);
 }
