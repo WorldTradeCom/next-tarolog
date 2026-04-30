@@ -8,48 +8,62 @@ interface VisitCardProps {
 
 export default function VisitCard({config, label}: VisitCardProps) {
 	return (
-		<main className="backgorud_gradient">
-			<div>
-				<header>
+		<main className="backgorud_gradient min-h-screen w-full overflow-x-hidden">
+			<div className="relative w-full">
+				<header className="relative w-full h-[20vh] md:h-[25vh]">
 					<Image
 						src="/images/header_background.webp"
 						alt="Background"
-						width={3456}
-						height={753}
-						className="h-2/12 md:h-1/4 absolute z-0 object-cover"
+						fill
+						className="z-0 object-cover"
 						priority
 					/>
 				</header>
-				<div className="min-h-screen text-white">
-					<div className="flex flex-col justify-center items-center h-screen text-center relative">
+				
+				<div className="flex flex-col items-center px-4 -mt-20 sm:-mt-32 relative z-10">
+					{/* Аватарка */}
+					<div className="relative mb-4">
 						<Image
 							src="/images/avatar.webp"
 							alt="Avatar"
 							width={300}
 							height={300}
-							className="z-10 w-40 h-40 sm:w-72 sm:h-72"
+							className="w-44 h-44 sm:w-72 sm:h-72 rounded-full border-4 border-white/10 shadow-2xl"
 						/>
-						<div className="text-center z-20">
-							<h1 className="text-[2.9rem] leading-none mt-4 font-normal">Галина</h1>
-							<h2 className="text-3xl font-normal">Провидица <span className="text-2xl">|</span> Таролог</h2>
-							<br/>
-							<span className="text-2xl">Пишите мне:</span>
-						</div>
-						
-						<div className="flex flex-wrap justify-center gap-4 mt-4 z-20">
-							<SocialButton type="max" color="#9A6EC3" config={config} />
-							<SocialButton type="telegram" color="#0088cc" config={config} />
-							<SocialButton type="whatsapp" color="#25d366" config={config} />
-						</div>
+					</div>
 
+					{/* Заголовки */}
+					<div className="text-center text-white mb-6">
+						<h1 className="text-[2.9rem] leading-none mb-2 font-medium">Галина</h1>
+						<h2 className="text-3xl font-light opacity-90">
+							Провидица <span className="text-2xl mx-1">|</span> Таролог
+						</h2>
+						<p className="text-xl mt-8 opacity-80 uppercase tracking-widest">Пишите мне:</p>
+					</div>
+					
+					{/* Кнопки — теперь строго в колонку */}
+					<div className="flex flex-col gap-4 w-full max-w-[320px]">
+						<SocialButton type="max" color="#9A6EC3" config={config} />
+						<SocialButton type="telegram" color="#0088cc" config={config} />
+						<SocialButton type="whatsapp" color="#25d366" config={config} />
+					</div>
+
+					{/* Разделитель */}
+					<div className="mt-8 w-full max-w-lg flex justify-center">
 						<Image
 							src="/images/star_line.webp"
 							alt="Star Line"
 							width={1432}
 							height={82}
-							className="py-4 z-20 w-auto"
+							className="w-full h-auto opacity-70"
 						/>
-						<span className="text-1xl md:text-2xl px-4 z-20">{label}</span>
+					</div>
+
+					{/* Нижняя плашка */}
+					<div className="mt-6 mb-12 text-center">
+						<p className="text-lg md:text-xl text-white/80 max-w-sm px-4 italic leading-relaxed">
+							{label}
+						</p>
 					</div>
 				</div>
 			</div>
